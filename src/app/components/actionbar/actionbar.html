@@ -1,0 +1,9 @@
+<div style="background:#f4f4f4">
+	<div class="container">
+		<select name="repo" id="repo" [(ngModel)]="selectedRepo" onchange="onRepoChange()">
+			<option *ngFor="#repo of repos" [value]=(repo) >{{repo}}</option>
+		</select>
+
+		<span style="floa:right" class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+	</div>
+</div>
