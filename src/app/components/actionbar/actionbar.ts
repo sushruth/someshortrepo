@@ -6,6 +6,7 @@ import {DataService} from './../../services/dataservice';
 	pipes: [],
 	providers: [DataService],
 	directives: [],
+	styleUrls: ['./actionbar.css'],
 	templateUrl: './actionbar.html',
 })
 export class ActionBar {
@@ -20,7 +21,10 @@ export class ActionBar {
 	onRepoChange() {
 		// fetchData
 		// UpdateData of the graph here.
+		this.dataservice.setRepo(this.selectedRepo);
 		this.dataservice.fetchData(this.selectedRepo);
+		console.log(this.dataservice.data);
+		console.log("Changed repo : " + this.selectedRepo);
 	}
 
 }
